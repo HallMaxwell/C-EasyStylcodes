@@ -8,15 +8,15 @@ int main()
 		{
 			if (3 * n == x)
 			{
-				printf("Âó\n");
+				printf("A\n");
 			}
 			if (5 * n == x)
 			{
-				printf("Êå\n");
+				printf("B\n");
 			}
 			if ((3 * n == x) && (5 * n == x))
 			{
-				printf("ÂóÊå\n");
+				printf("C\n");
 			}
 		}
 	}
