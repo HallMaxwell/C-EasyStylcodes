@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "windows": {
+                "command": "g++",
+                "args": [
+                    //"-ggdb",
+                    "\"${file}\"",
+                    "--std=c++11",
+                    "-lgraphics64",
+                    "-lgdi32",
+                    "-limm32",
+                    "-lmsimg32",
+                    "-lole32",
+                    "-loleaut32",
+                    "-lwinmm",
+                    "-luuid",
+                    "-mwindows",
+                    "-LC:\\Program Files\\mingw64\\lib",//换成你的lib文件夹比如“-LC:\\programs Files\\mingw64\\lib”
+                    "-IC:\\Program Files\\mingw64\\include\\ege",
+                   "-o",
+                   "\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+                   //"-finput-charset=UTF-8",//输入编译器文本编码 默认为UTF-8
+                    //"-fexec-charset=GBK"//编译器输出文本编码 自行选择
+                ]
+            }
+        }
+    ]
+}
